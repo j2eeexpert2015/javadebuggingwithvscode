@@ -1,10 +1,10 @@
 package org.debugtutorial.problemsolving.solutions.simple;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Given two strings consisting of digits 0 and 1 only, find the XOR of the two strings.
- * Debug the given function stringsXOR to find the XOR of the two given strings appropriately.
+ * Debug the given function strings_xor to find the XOR of the two given strings appropriately.
  * Input Format
  *
  * The input consists of two lines. The first line of the input contains the first string
@@ -22,9 +22,9 @@ public class XORStringSolution {
         String res = new String("");
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == t.charAt(i))
-                res = "0";
+                res = res+"0";
             else
-                res = "1";
+                res =res+"1";
         }
 
         return res;

@@ -3,7 +3,7 @@ package org.debugtutorial.problemsolving.problems.simple;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-public class Fibonacci
+public class FibonacciProblem
 {
     public static void main(String[] args) {
         int repeat = 8;

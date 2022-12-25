@@ -1,16 +1,16 @@
 package org.debugtutorial.problemsolving.problems.simple;
 
-public class BuggySortProblem {
+public class BubbleSortProblem {
     public static void main(String args[]) {
         int data[] = {45, 2, 33, 11, 5, 9, 7, 21, 10, 67, 99, 123, 42, 81, 100, 54};
 
-        System.out.println("our numbers:");
+        System.out.println("input numbers:");
         printArray(data, 0, 15);
         System.out.println();
 
-        bubbleSort(data, 0, 15);
+        performBubbleSort(data, 0, 15);
 
-        System.out.println("after sorting:");
+        System.out.println("numbers after sorting:");
         printArray(data, 0, 15);
         System.out.println();
     }
@@ -23,7 +23,7 @@ public class BuggySortProblem {
         System.out.println();
     }
 
-    public static void bubbleSort(int[] arr, int startIndex, int endIndex) {
+    public static void performBubbleSort(int[] arr, int startIndex, int endIndex) {
         int i, j, temp;
 
         for (i = endIndex; i > startIndex; i--) {

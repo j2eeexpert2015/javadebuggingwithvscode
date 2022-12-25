@@ -1,6 +1,6 @@
-package org.debugtutorial.problemsolving;
+package org.debugtutorial.problemsolving.simple;
 
-public class Problem3
+public class CalculateRootProblem
 {
     /**
      * Given a quadratic equation in the form ax2 + bx + c, find roots of it.

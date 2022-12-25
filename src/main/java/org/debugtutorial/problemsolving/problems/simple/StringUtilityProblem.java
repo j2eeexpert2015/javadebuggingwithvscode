@@ -19,7 +19,7 @@ public class StringUtilityProblem {
         char ch = stdin.next().charAt(0);
 
         System.out.println("Character " + ch + " occurs "
-                + countOccurrences(str, ch) + " times in string \""
+                + countOfccurrences(str, ch) + " times in string \""
                 + str + "\".");
 
         System.out.println("\n\nEnter another String: ");
@@ -32,7 +32,7 @@ public class StringUtilityProblem {
     /**
      * Counts the number of occurrences of char ch in String str.
      */
-    public static int countOccurrences(String inputStr, char c) {
+    public static int countOfccurrences(String inputStr, char c) {
         int count = 1;
         if (inputStr != null) {
             for (int i = 1; i < inputStr.length(); i++) {

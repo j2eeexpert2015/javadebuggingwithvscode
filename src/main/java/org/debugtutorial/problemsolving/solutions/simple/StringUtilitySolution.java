@@ -11,6 +11,7 @@ public class StringUtilitySolution {
      */
     public static void main(String[] args) {
         Scanner stdin = new Scanner(System.in);
+
         System.out.println("Enter a String: ");
         String str = stdin.next();
 
@@ -20,6 +21,7 @@ public class StringUtilitySolution {
         System.out.println("Character " + ch + " occurs "
                 + countOfccurrences(str, ch) + " times in string \""
                 + str + "\".");
+
         System.out.println("\n\nEnter another String: ");
         str = stdin.next();
 
@@ -34,8 +36,7 @@ public class StringUtilitySolution {
     public static int countOfccurrences(String inputStr, char c) {
         int count = 0;
         if (inputStr != null) {
-            for (int i = 0; i < inputStr.length(); i++)
-            {
+            for (int i = 0; i < inputStr.length(); i++) {
                 if (inputStr.charAt(i) == c) {
                     count++;
                 }
@@ -53,9 +54,10 @@ public class StringUtilitySolution {
 
         for (int i = 0; i < charArray.length; i++) {
             char cTmp = charArray[i];
-            charArray[i] = charArray[charArray.length-i-1];
-            charArray[charArray.length-i-1] = cTmp;
-            if(i >=(charArray.length-i-1))
+            int endIndex=charArray.length-i-1;
+            charArray[i] = charArray[endIndex];
+            charArray[endIndex] = cTmp;
+            if(i>=endIndex)
             {
                 break;
             }

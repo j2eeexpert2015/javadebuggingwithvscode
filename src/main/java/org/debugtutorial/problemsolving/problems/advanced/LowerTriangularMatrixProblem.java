@@ -1,17 +1,17 @@
-package org.debugtutorial.problemsolving.problems.simple;
+package org.debugtutorial.problemsolving.problems.advanced;
 import java.util.Arrays;
 
 /**
- * A lower triangular matrix is a 2D array with zeros above the main diagonal.
- * The goal is to convert a 2D array into a lower triangular matrix:
+ * A lower triangular matrix is a two-dimensional array with zeros above the diagonal.
+ * The goal og this code is to convert a 2D array into a lower triangular matrix:
  * Input Matrix:
- * [1, 0, 0]
- * [8, 6, 0]
- * [2, 4, 6]
+ * [1, 2, 3]
+ * [4, 5, 6]
+ * [7, 8, 9]
  * Expected output Matrix:
  * [1, 0, 0]
- * [8, 0, 0]
- * [2, 4, 0]
+ * [4, 5, 0]
+ * [7, 8, 9]
  */
 
 public class LowerTriangularMatrixProblem {
@@ -21,6 +21,8 @@ public class LowerTriangularMatrixProblem {
                 {8, 6, 4},
                 {2, 4, 6}
         };
+        System.out.println("Initial Matrix ");
+        printMatrix(matrix);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j <= i; j++) {
                 if (j >= i) {
@@ -29,7 +31,7 @@ public class LowerTriangularMatrixProblem {
             }
         }
 
-        System.out.println();
+        System.out.println("LowerTriangularMatrix");
         printMatrix(matrix);
     }
     public static void printMatrix(int[][] matrix) {

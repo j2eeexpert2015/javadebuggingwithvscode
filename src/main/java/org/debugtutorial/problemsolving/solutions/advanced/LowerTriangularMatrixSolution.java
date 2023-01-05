@@ -24,9 +24,9 @@ public class LowerTriangularMatrixSolution {
         System.out.println("Initial Matrix :");
         printMatrix(matrix);
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j <= i; j++) {
-                if (j >= i) {
-                    matrix[i][j] = 0;
+            for (int j = i; j < matrix[i].length; j++) {
+                if (j > i) {
+                    matrix[i][j]=0;
                 }
             }
         }

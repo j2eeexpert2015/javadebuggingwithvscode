@@ -1,4 +1,4 @@
-package org.debugtutorial.problemsolving.problems.advanced;
+package org.debugtutorial.problemsolving.solutions.advanced;
 import java.util.Arrays;
 
 /**
@@ -14,7 +14,7 @@ import java.util.Arrays;
  * [7, 8, 9]
  */
 
-public class LowerTriangularMatrixProblem {
+public class LowerTriangularMatrixSolution {
     public static void main(String[] args) {
         int[][] matrix = new int[][] {
                 {1, 2, 3},

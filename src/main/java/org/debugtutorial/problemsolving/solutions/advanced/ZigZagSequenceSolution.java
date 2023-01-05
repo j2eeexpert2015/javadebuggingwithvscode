@@ -1,7 +1,7 @@
-package org.debugtutorial.problemsolving.problems.advanced;
+package org.debugtutorial.problemsolving.solutions.advanced;
 
-import java.util.*;
-import java.lang.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Given an array of n distinct integers, transform the array into a zigzag sequence by permuting the array
@@ -20,7 +20,7 @@ import java.lang.*;
  * Sample Output
  * 1 2 3 7 6 5 4
  */
-public class ZigZagSequenceProblem {
+public class ZigZagSequenceSolution {
     public static void main (String[] args) throws Exception {
         Scanner kb = new Scanner(System.in);
         int test_cases = kb.nextInt();

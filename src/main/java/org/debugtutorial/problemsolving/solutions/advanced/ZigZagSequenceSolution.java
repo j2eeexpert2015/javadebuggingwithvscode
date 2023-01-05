@@ -9,7 +9,7 @@ import java.util.Scanner;
  * increasing order and the last k elements are in decreasing order, where k=(n+1)/2.
  * You need to find lexicographically the smallest zigzag sequence of the given array.
  * Example.
- * a=[]2,3,5,1,4]
+ * a=[2,3,5,1,4]
  * Now if we permute the array as [1,4,5,3,2], the result is a zigzag sequence.
  * Debug the given function findZigZagSequence to return the appropriate
  * zigzag sequence for the given input array.
@@ -36,19 +36,19 @@ public class ZigZagSequenceSolution {
 
     public static void findZigZagSequence(int [] a, int n){
         Arrays.sort(a);
-        int mid = (n + 1)/2;
+        int mid = (n + 1)/2 -1;
         int temp = a[mid];
         a[mid] = a[n - 1];
         a[n - 1] = temp;
 
         int st = mid + 1;
-        int ed = n - 1;
+        int ed = n - 2;
         while(st <= ed){
             temp = a[st];
             a[st] = a[ed];
             a[ed] = temp;
             st = st + 1;
-            ed = ed + 1;
+            ed = ed - 1;
         }
         for(int i = 0; i < n; i++){
             if(i > 0) System.out.print(" ");

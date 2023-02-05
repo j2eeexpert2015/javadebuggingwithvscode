@@ -1,5 +1,41 @@
 package org.debugtutorial.problemsolving.problems.advanced;
 import java.util.*;
+
+/**
+ *
+ * There are n boxes in front of you. For each i, box i contains r[i] red balls, g[i] green balls,
+ * and b[i] blue balls.
+ * You want to separate the balls by their color. In each operation, you can pick a single ball from
+ * some box and put it into another box.
+ * The balls are separated if no box contains balls of more than one color.
+ * Debug the given function minOperations and compute the minimal number of operations required
+ * to separate the balls.
+ * Note: In this problem you can modify at most six lines of code and you cannot add any new lines.
+ *
+ * Input Format
+ * The first line contains a single integer n.
+ * The next n lines i contain three space-separated integers,r[i], g[i], and b[i], respectively.
+ * Print the minimal number of operations required to separate the balls.
+ * If this is impossible, return -1.
+ * Sample Input
+ *
+ *  3
+ *  1 1 1
+ *  1 1 1
+ *  1 1 1
+ *  Sample Output
+ *
+ *  6
+ *  Explanation
+ *
+ *  Each box contains 1 ball of each color.
+ *  In this explanation, the goal will be to let the first box contain only red balls,
+ *  the second box only blue balls, and the third box only green balls.
+ *  Move 1 blue ball and 1 green ball from the first box to the second and third boxes.
+ *  Move 1 red ball and 1 green ball from the second box to the first and third boxes.
+ *  Move 1 red ball and 1 blue ball from the third box to the first and second boxes.
+ *  The number of operations is 6.
+ */
 public class MinimumOperations
 {
     private static final Scanner scan = new Scanner(System.in);

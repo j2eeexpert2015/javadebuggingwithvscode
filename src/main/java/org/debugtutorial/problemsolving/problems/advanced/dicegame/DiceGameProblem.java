@@ -1,4 +1,4 @@
-package org.debugtutorial.problemsolving.problems.advanced;
+package org.debugtutorial.problemsolving.problems.advanced.dicegame;
 
 
 public class DiceGameProblem {
@@ -46,7 +46,12 @@ public class DiceGameProblem {
     }
     public static void main(String[] args) {
         System.out.println("Add the values of the dice");
+        int randomNumber =roll();
+        for (int i=0;i<=randomNumber;i++)
+        {
+            System.out.println(createDice(i));
+        }
 
-        System.out.println(createDice(1));
+        System.out.println("randomNumber:"+randomNumber);
     }
 }

@@ -1,21 +1,39 @@
 package org.debugtutorial.problemsolving.problems.advanced;
 
 import java.util.HashMap;
+
+/**
+ * Basic Data Structure for each entry for LRU Cache
+ */
 class Entry {
     int value;
     int key;
     Entry left;
     Entry right;
 }
+
+/**
+ * Following class implements LRU cache using HashMap and doubly linked list.
+ * Here the HashMap will hold the keys and address of the nodes of doubly linkedList and doubly linked list will
+ * hold the values of keys.
+ * To keep track of recently used entries, the code would remove element from bottom and add element on start of linked list
+ * Whenever any entry is accessed , it will be moved to top,so that recently used entries will be on top and Least used will be on Bottom.
+ */
 public class LRUCache {
 
     HashMap<Integer, Entry> hashmap;
     Entry start, end;
-    int LRU_SIZE = 4; // Here LRU_SIZE size set 4 for test purpose
+    // LRU_SIZE size is set as 4
+    int LRU_SIZE = 4;
     public LRUCache() {
         hashmap = new HashMap<Integer, Entry>();
     }
 
+    /**
+     * Method to get item from the LRUCache if available else return -1
+     * @param key
+     * @return
+     */
     public int get(int key) {
         if (hashmap.containsKey(key))
         {
@@ -27,6 +45,11 @@ public class LRUCache {
         return -1;
     }
 
+    /**
+     * Method to store item  inside the LRUCache
+     * @param key
+     * @param value
+     */
     public void put(int key, int value) {
         // If key already present, update the value and move it to top
         if (hashmap.containsKey(key))
@@ -41,7 +64,7 @@ public class LRUCache {
             newnode.right = null;
             newnode.value = value;
             newnode.key = key;
-            if (hashmap.size() > LRU_SIZE) // We have reached maxium size so need to make room for new element.
+            if (hashmap.size() > LRU_SIZE) // We have reached maxinum size so need to make room for new element.
             {
                 hashmap.remove(end.key);
                 removeNode(end);
@@ -54,6 +77,12 @@ public class LRUCache {
             hashmap.put(key, newnode);
         }
     }
+
+    /**
+     * Whenever any item is accessed make item node at the top
+     * as it is most recently accessed
+     * @param node
+     */
     public void addAtTop(Entry node) {
         node.right = start;
         node.left = null;
@@ -64,6 +93,10 @@ public class LRUCache {
             end = start;
     }
 
+    /**
+     *
+     * @param node
+     */
     public void removeNode(Entry node) {
 
         if (node.left != null) {

@@ -17,6 +17,7 @@ public class GameRunner {
         round=1;
         wins=0;
         losses=0;
+        dices = Dice.createDice(5);
     }
     private int answer()
     {
@@ -58,6 +59,7 @@ public class GameRunner {
 
             if (choice.equalsIgnoreCase("y"))
             {
+                reset();
                 continue;
             }
             else

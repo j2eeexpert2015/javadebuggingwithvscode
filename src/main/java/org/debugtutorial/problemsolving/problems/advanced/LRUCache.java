@@ -64,16 +64,14 @@ public class LRUCache {
             newnode.right = null;
             newnode.value = value;
             newnode.key = key;
-            if (hashmap.size() > LRU_SIZE) // We have reached maxinum size so need to make room for new element.
+            // When maximum size is reached make room for new element.
+            if (hashmap.size() == LRU_SIZE)
             {
                 hashmap.remove(end.key);
                 removeNode(end);
                 addAtTop(newnode);
 
-            } else {
-                addAtTop(newnode);
             }
-
             hashmap.put(key, newnode);
         }
     }

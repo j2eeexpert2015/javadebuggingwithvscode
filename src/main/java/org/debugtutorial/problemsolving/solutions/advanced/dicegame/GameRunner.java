@@ -1,4 +1,4 @@
-package org.debugtutorial.problemsolving.solutions.advanced.advanced.dicegame;
+package org.debugtutorial.problemsolving.solutions.advanced.dicegame;
 
 import java.util.List;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package org.debugtutorial.problemsolving.solutions.advanced.advanced.dicegame;
+package org.debugtutorial.problemsolving.solutions.advanced.dicegame;
 
 import java.util.ArrayList;
 import java.util.List;

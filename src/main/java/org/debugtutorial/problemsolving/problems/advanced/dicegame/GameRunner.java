@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class GameRunner {
     private int round=1,wins,losses =0;
-    private static List<Dice> dices = Dice.createDice(5);
+    private List<Dice> dices = null;
 
     public GameRunner() {
     }
@@ -30,6 +30,7 @@ public class GameRunner {
     }
     public void run()
     {
+        dices = Dice.createDice(5);
         while (true)
         {
             System.out.println("Round number: "+this.round);
